@@ -1,6 +1,7 @@
 let ipt = document.querySelector('input')
 let btn = document.querySelector('.btn-dark')
 let tasks = document.querySelector("#tasks")
+let deleteAll = document.querySelector('.btn-sm')
 
 // obliger l'utisateur à taper quelque chose dans l'input sinon désactivé button
 ipt.addEventListener('input', () => {
@@ -39,3 +40,8 @@ const deleteTask = (id) => {
     let el = document.getElementById(`${id}`)
     el.parentElement.parentElement.remove()
 }
+
+
+deleteAll.addEventListener('click', () => {
+    tasks.innerHTML = ""
+})
